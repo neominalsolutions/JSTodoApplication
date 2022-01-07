@@ -11,7 +11,7 @@
         <a href="todos.html" class="item">Todos Promise</a>
         <a href="todos-async.html" class="item">Todos async/await</a>
         <a class="item">Testimonials</a>
-        <a class="item">Sign-in</a>
+        <a class="item" href="login.html">Sign-in</a>
         </div>
         `
         // dökümanın bodysine menuHtml append et
