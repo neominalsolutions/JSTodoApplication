@@ -22,11 +22,11 @@
     >
       <div class="field">
         <label>Email</label>
-        <input type="email" name="email" placeholder="Email" value="eve.holt@reqres.in" />
+        <input type="email" name="email" required placeholder="Email" value="eve.holt@reqres.in" />
       </div>
       <div class="field">
         <label>Password</label>
-        <input type="password" name="password" placeholder="Password" value="cityslicka" />
+        <input type="password" name="password" required placeholder="Password" value="cityslicka" />
       </div>
       <div class="field">
         <div class="ui checkbox">
@@ -83,14 +83,18 @@
             localStorage.setItem('email', loginForm?.email?.value);
             // localStorage biz bunu kod ile siline kadar bu bilgileri tarayıcıda saklar. rememberMe seçeneğine göre bu kullanıcı bilgilerini kalıcı olarak saklanıp saklanmamasına kara vermiş olduk.
             // localStorage.removeItem('token'); localstorage daki bilgili yandaki gibi silebiliriz.
+           
           } else {
               //sessionStroge ise uygulamadan ayrılana kadar bu bilgileri tarayıcıda saklar.
               // session storage daki bilgiler tarayıcı kapattığınız anda siliniz.
 
               sessionStorage.setItem('token', data?.token);
               sessionStorage.setItem('email', loginForm?.email?.value);
+              // location.href ile js ile sayfa yönlendişrdik.
           }
 
+
+          window.location.href = 'index.html';
 
  
         } catch (error) { 
